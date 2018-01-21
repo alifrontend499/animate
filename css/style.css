@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: calibri;
+}
+
+.sky {
+  background-color: #0086FF;
+  width: 100%;
+  height: 196px;
+  position: relative;
+}
+.sky img {
+  position: absolute;
+}
+.sky img:nth-child(1) {
+  top: 10px;
+  left: 50px;
+  opacity: .5;
+  animation: cloudLeftRight 80s linear infinite alternate;
+}
+@keyframes cloudLeftRight {
+  from {
+    left: 50px;
+  }
+  to {
+    left: calc(100% - 200px);
+  }
+}
+.sky img:nth-child(2) {
+  top: 50px;
+  right: 50px;
+  opacity: .8;
+  animation: cloudRightLeft 30s linear infinite alternate;
+}
+@keyframes cloudRightLeft {
+  from {
+    right: 50px;
+  }
+  to {
+    right: calc(100% - 200px);
+  }
+}
+
+.grass {
+  background: url('../images/grass.png') no-repeat 0 0 / 100% 100%;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.grass > div {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin: auto;
+}
+.road {
+  background-color: #698799;
+  width: 100%;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+.roadline{
+  position: absolute;
+  top: calc(50% + 5px);
+  border: 5px dashed #fff;
+  width: 100%;
+}
+.road img {
+  position: absolute;
+}
+.road img.one{
+  width: 150px;
+  top: 0px;
+  left: 0;
+  animation-name: leftRight;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+.road img.two {
+  top: 160px;
+  width: 120px;
+  right: 0;
+  animation-name: rightLeft;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes leftRight {
+  from {
+    transform: translateX(-150px);
+  }
+  to {
+      transform: translateX(1280px);
+  }
+}
+@keyframes rightLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-1280px);
+  }
+}
