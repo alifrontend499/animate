@@ -49,13 +49,6 @@ body {
   background: url('../images/grass.png') no-repeat 0 0 / 100% 100%;
   width: 100%;
   height: 200px;
-  position: relative;
-}
-.grass > div {
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  margin: auto;
 }
 .road {
   background-color: #698799;
@@ -110,5 +103,151 @@ body {
   }
   to {
     transform: translateX(-1280px);
+  }
+}
+
+
+/* POPUP CSS */
+.popup {
+  border: 1px solid #333;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.popup-inner-1 {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.popup-inner-2{
+  display: table-cell;
+  vertical-align: middle;
+}
+.popup-main {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #333;
+  margin: auto;
+  transform-origin: 0px 0px;
+  background: purple;
+}
+.popup-main.one {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  animation: topBottom 5s linear infinite reverse;
+}
+.popup-main.two {
+  position: absolute;
+  /* top: 200px; */
+  left: 200px;
+  animation: topBottom 10s linear infinite reverse;
+}
+@keyframes topBottom {
+  0% {
+    transform: rotate(0);
+    background: purple;
+  }
+  50% {
+    transform: rotate(360deg);
+    background: red;
+  }
+  100% {
+    transform: rotate(0deg);
+    background: grren;
+  }
+}
+
+
+.parent ,
+.list-inline{
+  display: table;
+  width: 100%;
+}
+.child,
+.list-inline > li{
+  display: inline-block;
+  margin-right: -4px;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* GRID CSS */
+header {
+  height: 100px;
+  border-bottom: 1px solid #333;
+  height: auto;
+  width: 100%;
+}
+
+header > .inner{
+  padding: 10px 20px;
+}
+header > .inner .child {
+  vertical-align: middle;
+  width: 50%;
+}
+header > .inner .child:nth-child(1) img{
+  width: 150px;
+}
+header > .inner .child:nth-child(2) img{
+  float: right;
+  width: 80px;
+}
+
+#products > .inner {
+  padding: 10px 20px;
+}
+#products .list-inline {
+
+}
+#products .list-inline > li{
+  width: 20%;
+  text-align: center;
+  padding: 0 10px 20px;
+}
+#products .list-inline > li img{
+  border: 1px solid #afafaf;
+  padding: 20px;
+}
+.buy-btn {
+  border: 1px solid #333;
+  padding: 5px 10px;
+  font-size: 15px;
+  background-color: purple;
+  color: #fff;
+  cursor: pointer;
+  transition: background .3s;
+  transition: .3s;
+}
+.buy-btn:hover {
+  background-color: #000;
+}
+.cloned_img {
+  position: absolute;
+  width: 100px;
+  padding: 0 !important;
+  animation: clonedImg 1.5s linear reverse;
+  z-index: 999;
+  /* top: 0;
+  left: 90%; */
+}
+@keyframes clonedImg{
+  from {
+    top: 0;
+    left: 100%;
+    width: 50px;
+    top: 60px;
+    opacity: 0;
+    display: table;
+  }
+  to {
+    top: 0;
+    left: 0%;
+    width: 100px;
+    opacity: 1;
+    display: none;
   }
 }

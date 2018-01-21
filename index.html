@@ -6,21 +6,79 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="sky">
-      <img src="images/clown.png" alt="">
-      <img src="images/clown.png" alt="">
-    </div>
-    <div class="grass">
-      <div class="">
-
+    <header>
+      <div class="inner parent">
+        <div class="child">
+          <img src="images/logo.png" alt="" class="img-responsive">
+        </div>
+        <div class="child">
+          <img src="images/cart-images.png" alt="" class="img-responsive">
+        </div>
       </div>
-    </div>
-    <div class="road">
-      <img src="images/girl-img.png" alt="" class="one">
-      <img src="images/original.png" alt="" class="two">
+    </header>
 
-      <div class="roadline">
+    <section id="products">
+      <div class="inner">
+        <ul class="list-inline">
+          <li>
+            <img src="images/shirt images.jpg" alt="" class="img-responsive">
+            <p>This is the image</p>
+            <button type="button" class="buy-btn" name="button">Buy one</button>
+          </li>
+          <li>
+            <img src="images/shirt images2.jpg" alt="" class="img-responsive">
+            <p>This is the image</p>
+            <button type="button" class="buy-btn" name="button">Buy one</button>
+          </li>
+          <li>
+            <img src="images/shirt images.jpg" alt="" class="img-responsive">
+            <p>This is the image</p>
+            <button type="button" class="buy-btn" name="button">Buy one</button>
+          </li>
+          <li>
+            <img src="images/shirt images2.jpg" alt="" class="img-responsive">
+            <p>This is the image</p>
+            <button type="button" class="buy-btn" name="button">Buy one</button>
+          </li>
+          <li>
+            <img src="images/shirt images.jpg" alt="" class="img-responsive">
+            <p>This is the image</p>
+            <button type="button" class="buy-btn" name="button">Buy one</button>
+          </li>
+          <li>
+            <img src="images/shirt images2.jpg" alt="" class="img-responsive">
+            <p>This is the image</p>
+            <button type="button" class="buy-btn" name="button">Buy one</button>
+          </li>
+          <li>
+            <img src="images/shirt images.jpg" alt="" class="img-responsive">
+            <p>This is the image</p>
+            <button type="button" class="buy-btn" name="button">Buy one</button>
+          </li>
+          <li>
+            <img src="images/shirt images2.jpg" alt="" class="img-responsive">
+            <p>This is the image</p>
+            <button type="button" class="buy-btn" name="button">Buy one</button>
+          </li>
+        </ul>
       </div>
-    </div>
+    </section>
+
+    <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('.buy-btn').click(function () {
+          var thisPare = $(this).parent();
+          var data = $(this).parent().find('img').clone().addClass('cloned_img').appendTo(thisPare);
+          $("html, body").animate({
+            scrollTop: 0
+          });
+          setTimeout(function () {
+            $('.cloned_img').remove()
+          }, 1500);
+
+        });
+      });
+    </script>
   </body>
 </html>
