@@ -45,5 +45,6 @@ window.onload = function () {
     });
   }
 
-// GETTING AJAX DATA USING JAVASCRIPT PROMISES  
+// GETTING AJAX DATA USING JAVASCRIPT PROMISES
+
 };
