@@ -1,0 +1,12 @@
+{
+  "jobs": [
+    {
+      "name": "Developer",
+      "scope": "80%"
+    },
+    {
+      "name": "Taylor",
+      "scope": "50%"
+    }
+  ]
+}

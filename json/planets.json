@@ -1,0 +1,12 @@
+{
+  "planets": [
+    {
+      "name": "Sun",
+      "age": 18888
+    },
+    {
+      "name": "Murcury",
+      "age": 685675
+    }
+  ]
+}
